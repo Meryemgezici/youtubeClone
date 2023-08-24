@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.videos {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minMax(400px, 1fr));
+    justify-content: space-between;
+    padding: 5px;
+  }

@@ -6,24 +6,33 @@ export const YoutubeContext = createContext();
 
 
 export const YoutubeProvider = ({ children }) => {
-    const [selectedCategory, setSelectedCategory] = useState({ name: "New", 
-    type: "category" });
-    
+
+    // Kategori verileri 
+    const [selectedCategory, setSelectedCategory] = useState({
+        name: "New",
+        type: "category"
+    });
+
+    // Videolar
+    const [videos, setVideos] = useState(null);
+
+
     useEffect(() => {
-       if(selectedCategory.type !== "menu"){
-        //  fetchCategory(selectedCategory.name);
-       }
+        setVideos(null);
+        if (selectedCategory.type !== "menu") {
+              fetchCategory(selectedCategory.name);
+        }
 
-    },[selectedCategory]);
+    }, [selectedCategory]);
 
-    const fetchCategory=(category)=>{
-        axios.get(`https://youtube138.p.rapidapi.com/search/?q=${category}`,options)
-       .then((response) =>console.log(response))
+    const fetchCategory = (category) => {
+        axios.get(`https://youtube138.p.rapidapi.com/search/?q=${category}`, options)
+            .then((response) => setVideos(response.data.contents))
     }
 
     return (
-        <YoutubeContext.Provider value={{ selectedCategory, setSelectedCategory }}>
+        <YoutubeContext.Provider value={{ selectedCategory, setSelectedCategory, videos }}>
             {children}
         </YoutubeContext.Provider>
-        );
+    );
 }
