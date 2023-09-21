@@ -5,24 +5,23 @@ import Loading from "../components/Loading";
 import VideoCard from "../components/VideoCard";
 
 const Feed = () => {
-    const {videos}= useContext(YoutubeContext);
-     console.log(videos);
-    // const m=true;
+    const { videos } = useContext(YoutubeContext);
+
     return (
-        <div className="flex bg-[#0f0f0f] text-white " >
-            <SideNav/>
+        <div className="flex bg-[#0f0f0f] text-white min-h-[100vh]" >
+            <SideNav />
             <div className="w-full videos">
                 {!videos ? (
-                <Loading/>
-                ) : (videos.map((item,index)=>{
-                    if(item.type!=="video") return;
-                    return <VideoCard key={index} video={item.video}/>;
+                    <Loading />
+                ) : (videos.map((item) => {
+                    if (item.type !== "video") return;
+                    return <VideoCard  video={item.video} />;
                 })
                 )
                 }
             </div>
         </div>
-     
+
     )
 }
 

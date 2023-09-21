@@ -1,8 +1,15 @@
 import { AiFillBell, AiFillYoutube } from "react-icons/ai"
 import { BiSearch } from "react-icons/bi"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Header = () => {
+    const navigate=useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate(`/results?search_query=${e.target[0].value}`)
+        e.target[0].value = '';
+    }
     return (
         <header className="p-4 bg-[#0f0f0f] flex justify-between items-center text-white">
 
@@ -12,7 +19,9 @@ const Header = () => {
             <h1>Youtube</h1>
         </Link>
 
-        <form className="flex items-center  rounded bg-white">
+        <form 
+        onSubmit={handleSubmit}
+        className="flex items-center  rounded bg-white">
 
             <input type="text" placeholder="Search" className="rounded px-4 py-1 text-black outline-none" />
             <button >

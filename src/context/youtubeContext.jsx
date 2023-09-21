@@ -19,7 +19,7 @@ export const YoutubeProvider = ({ children }) => {
 
     useEffect(() => {
         setVideos(null);
-        if (selectedCategory.type !== "menu") {
+        if (selectedCategory.type === "category") {
               fetchCategory(selectedCategory.name);
         }
 
@@ -28,6 +28,7 @@ export const YoutubeProvider = ({ children }) => {
     const fetchCategory = (category) => {
         axios.get(`https://youtube138.p.rapidapi.com/search/?q=${category}`, options)
             .then((response) => setVideos(response.data.contents))
+            .catch((err) => console.log(err));
     }
 
     return (

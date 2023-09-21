@@ -63,14 +63,14 @@ export const categories = [
   },
 ];
 
+
 export const options = {
-  
   params: {
     hl: 'en',
     gl: 'US'
   },
   headers: {
-    'X-RapidAPI-Key': 'c4d2c164ffmsh510cbdef570ef2dp181b1fjsn87198d572be6',
+    'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
     'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
   }
 };
