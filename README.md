@@ -1,4 +1,4 @@
-<h1>Youtube Clone</h1>
+<!-- <h1>Youtube Clone</h1>
  
 Bu uygulama, kullanıcıların videoları tarayabilmesi, izleyebilmesi ve arama yapabilmesi gibi temel video paylaşım platformu işlevlerini sunar. YouTube benzeri bir deneyim sunarak, kullanıcıların videoları keşfetmelerini, izlemelerini ve paylaşmalarını sağlar. Ayrıca, kullanıcı deneyimini geliştirmek için benzer içerik önerileri ve yanlış yazım düzeltmeleri gibi özellikleri içerir.
 
@@ -15,6 +15,6 @@ Bu uygulama, kullanıcıların videoları tarayabilmesi, izleyebilmesi ve arama 
  <h2>Kullanılan Teknolojiler</h2>
   Bu sitede Tailwind CSS, Vite, React.js(useState,useEffect,useSearchParams,useParams,Context Api,React Router Dom,axios,React icons,millify,moment)  teknolojileri kullanıldı.
 
-<h3>Ekran Görüntüsü</h3>
+<h3>Ekran Görüntüsü</h3> -->
 
 <!-- ![](project.gif) -->
