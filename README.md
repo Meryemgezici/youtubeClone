@@ -1,4 +1,4 @@
-<!-- <h1>Youtube Clone</h1>
+<h1>Youtube Clone</h1>
  
 Bu uygulama, kullanıcıların videoları tarayabilmesi, izleyebilmesi ve arama yapabilmesi gibi temel video paylaşım platformu işlevlerini sunar. YouTube benzeri bir deneyim sunarak, kullanıcıların videoları keşfetmelerini, izlemelerini ve paylaşmalarını sağlar. Ayrıca, kullanıcı deneyimini geliştirmek için benzer içerik önerileri ve yanlış yazım düzeltmeleri gibi özellikleri içerir.
 
@@ -17,4 +17,4 @@ Bu uygulama, kullanıcıların videoları tarayabilmesi, izleyebilmesi ve arama 
 
 <h3>Ekran Görüntüsü</h3> -->
 
-<!-- ![](project.gif) -->
+ <!-- ![](project.gif) -->
